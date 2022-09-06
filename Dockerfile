@@ -3,7 +3,7 @@ FROM anasty17/mltb:heroku
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
 
-RUN apt-get -qq update && apt-get -qq install -y mediainfo
+RUN apt-get -qq update && apt-get -qq install -y wget mediainfo
 
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
     wget -qO - https://ftp-master.debian.org/keys/archive-key-10.asc | apt-key add -
