@@ -6,7 +6,7 @@ RUN apt-get -qq update
 RUN apt-get -qq install -y --no-install-recommends curl git gnupg2 unzip wget pv jq gdebi
 
 RUN wget https://mediaarea.net/download/binary/mediainfo/19.09/mediainfo_19.09-1_amd64.xUbuntu_17.10.deb
-RUN apt install *deb
+RUN dpkg -i mediainfo_19.09-1_amd64.xUbuntu_17.10.deb
 
 # add mkvtoolnix
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
